@@ -1,6 +1,6 @@
 import Section from "../components/Section";
 import PageLink from "../components/PageLink";
-import { workItems, writingItems } from "../content/index";
+import { workItems } from "../content/index";
 import { email } from "../data/links";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section heading="Work">
+      <Section heading="Stuff">
         <ul className="link-list">
           {workItems.map((item) => (
             <li key={item.slug}>
@@ -41,7 +41,7 @@ export default function Home() {
         </ul>
       </Section>
 
-      <Section heading="Writing">
+      {/*<Section heading="Writing">
         <ul className="link-list">
           {writingItems.map((item) => (
             <li key={item.slug}>
@@ -50,16 +50,16 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </Section>
+      </Section>*/}
 
-      <Section heading="About">
+      {/*<Section heading="About">
         <p>A bit more about who I am and what I care about.</p>
         <ul className="link-list">
           <li>
             <PageLink href="/about">Read more →</PageLink>
           </li>
         </ul>
-      </Section>
+      </Section>*/}
 
       <Section heading="Contact">
         <ul className="link-list">

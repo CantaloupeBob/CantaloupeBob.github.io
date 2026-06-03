@@ -46,8 +46,9 @@ export default function ArticlePage({ type }: ArticlePageProps) {
         {externalLink && (
           <p className="subtitle">
             <a href={externalLink} target="_blank" rel="noopener noreferrer">
-              Perpetual trading with prediction market based signals.
-            </a>
+              Travel there
+            </a>{" "}
+            &rarr;
           </p>
         )}
       </div>

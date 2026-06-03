@@ -31,19 +31,8 @@ export const workItems: WorkMeta[] = [
   {
     slug: "allo-exposure",
     title: "Allo Exposure",
-    description: (
-      <>
-        One shot into a basket of{" "}
-        <a
-          href="https://kinetiq.xyz/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Kinetiq
-        </a>{" "}
-        ecosystem tokens.
-      </>
-    ),
+    externalLink: "http://alloexposure.xyz/",
+    description: <>One shot into a basket of Kinetiq ecosystem tokens.</>,
   },
 ];
 

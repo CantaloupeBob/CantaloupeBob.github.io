@@ -1,0 +1,416 @@
+/* ─── Reset ────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── Design tokens ─────────────────────────────────────────────────────────── */
+:root {
+    /* Light mode – warm, paper-like */
+    --bg: #f6f1eb;
+    --fg: #28231e;
+    --fg-muted: #9a8f84;
+    --border: #ddd5cc;
+
+    /* Typography */
+    --font-body:
+        "Iowan Old Style", Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-ui:
+        system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    /* Spacing scale (multiples of 0.25rem) */
+    --sp-1: 0.25rem;
+    --sp-2: 0.5rem;
+    --sp-3: 0.75rem;
+    --sp-4: 1rem;
+    --sp-6: 1.5rem;
+    --sp-8: 2rem;
+    --sp-10: 2.5rem;
+    --sp-12: 3rem;
+    --sp-16: 4rem;
+    --sp-20: 5rem;
+    --sp-24: 6rem;
+
+    /* Layout */
+    --measure: 65ch;
+    --page-px: var(--sp-8);
+}
+
+/* Dark mode – warm, candlelit */
+.dark {
+    --bg: #1a1714;
+    --fg: #e4ddd4;
+    --fg-muted: #8a8078;
+    --border: #2d2a26;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+html {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* ─── Layout ────────────────────────────────────────────────────────────────── */
+.layout {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 var(--page-px);
+}
+
+/* ─── Header / Nav ──────────────────────────────────────────────────────────── */
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: var(--sp-12) 0 var(--sp-16);
+}
+
+.site-name {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.site-name:hover {
+    color: var(--fg);
+}
+
+/* ─── Theme toggle ──────────────────────────────────────────────────────────── */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    padding: 0;
+    line-height: 1;
+    transition: color 0.15s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--fg);
+}
+
+/* ─── Main ──────────────────────────────────────────────────────────────────── */
+.main {
+    padding-bottom: var(--sp-24);
+}
+
+/* ─── Page ──────────────────────────────────────────────────────────────────── */
+.page-intro {
+    margin-bottom: var(--sp-12);
+}
+
+.back-link {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--fg-muted);
+    text-decoration: none;
+    margin-bottom: var(--sp-10);
+    transition: color 0.15s ease;
+}
+
+.back-link:hover {
+    color: var(--fg);
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────────── */
+h1 {
+    font-family: var(--font-body);
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin-bottom: var(--sp-2);
+}
+
+h2 {
+    /* Used as section labels – restrained, editorial */
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--fg-muted);
+    margin-bottom: var(--sp-4);
+}
+
+p {
+    color: var(--fg);
+}
+
+.text-muted {
+    color: var(--fg-muted);
+    font-size: 0.9375rem;
+}
+
+.subtitle {
+    color: var(--fg-muted);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ─── Links ─────────────────────────────────────────────────────────────────── */
+a {
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--border);
+    transition:
+        text-decoration-color 0.15s ease,
+        color 0.15s ease;
+}
+
+a:hover {
+    text-decoration-color: var(--fg-muted);
+}
+
+/* ─── Sections ──────────────────────────────────────────────────────────────── */
+.section {
+    padding: var(--sp-10) 0;
+    border-top: 1px solid var(--border);
+}
+
+.section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.section-body > * + * {
+    margin-top: var(--sp-4);
+}
+
+/* ─── Link list ─────────────────────────────────────────────────────────────── */
+.link-list {
+    list-style: none;
+    margin-top: var(--sp-4);
+}
+
+.link-list li {
+    padding: var(--sp-3) 0;
+    border-top: 1px solid var(--border);
+}
+
+.link-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Navigation links (item titles) — no underline, rely on color shift */
+.link-list a {
+    text-decoration: none;
+    color: var(--fg);
+    transition: color 0.15s ease;
+}
+
+.link-list a:hover {
+    color: var(--fg-muted);
+}
+
+/* Inline links within descriptions — restore underline so they read as links */
+.link-list .item-meta a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--border);
+}
+
+.link-list .item-meta a:hover {
+    color: var(--fg-muted);
+    text-decoration-color: var(--fg-muted);
+}
+
+.link-list .item-meta {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    margin-top: var(--sp-1);
+    font-style: italic;
+}
+
+/* ─── Article prose ────────────────────────────────────────────────────────── */
+/*
+  Scoped under .article so these rules never bleed into page UI.
+  h2/h3 inside articles override the global section-label styles.
+*/
+.article > * + * {
+    margin-top: var(--sp-6);
+}
+
+/* Sub-headings: proper italic serif, not the small-caps label style */
+.article h2 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--fg);
+    margin-top: var(--sp-12);
+    margin-bottom: 0;
+}
+
+.article h2 + * {
+    margin-top: var(--sp-4);
+}
+
+/* Section labels within articles: same small-caps pattern as global h2 */
+.article h3 {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--fg-muted);
+    margin-top: var(--sp-10);
+    margin-bottom: 0;
+}
+
+.article h3 + * {
+    margin-top: var(--sp-3);
+}
+
+.article blockquote {
+    border-left: 1px solid var(--border);
+    margin: 0;
+    padding-left: var(--sp-6);
+    color: var(--fg-muted);
+    font-style: italic;
+}
+
+.article blockquote > * + * {
+    margin-top: var(--sp-3);
+}
+
+.article ul,
+.article ol {
+    padding-left: var(--sp-6);
+}
+
+.article ul {
+    list-style: disc;
+}
+
+.article ol {
+    list-style: decimal;
+}
+
+.article li + li {
+    margin-top: var(--sp-2);
+}
+
+.article hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: var(--sp-12) 0;
+}
+
+.article strong {
+    font-weight: 600;
+    color: var(--fg);
+}
+
+/* Inline code */
+.article code {
+    font-family:
+        ui-monospace, "Cascadia Code", Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875em;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+}
+
+/* Code blocks */
+.article pre {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: var(--sp-4) var(--sp-6);
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.article pre code {
+    border: none;
+    padding: 0;
+    font-size: inherit;
+}
+
+.article img,
+.article video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: var(--sp-8) 0;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+}
+
+/* Full-bleed variant: add class="full" to an <img> or <video> */
+.article img.full,
+.article video.full {
+    width: 100%;
+}
+
+/* Caption: place a <small> immediately after an <img> or <video> */
+.article img + small,
+.article video + small {
+    display: block;
+    margin-top: calc(var(--sp-2) * -1);
+    margin-bottom: var(--sp-8);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+    letter-spacing: 0.02em;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    :root {
+        --page-px: var(--sp-6);
+    }
+
+    html {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding-top: var(--sp-8);
+        padding-bottom: var(--sp-12);
+    }
+}

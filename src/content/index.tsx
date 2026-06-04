@@ -2,12 +2,18 @@ import type { ReactNode, ComponentType } from "react";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-export interface WorkMeta {
+export interface StuffMeta {
   slug: string;
   title: string;
   description: ReactNode;
   year?: string;
   externalLink?: string;
+}
+
+export interface WorkMeta {
+  slug: string;
+  title: string;
+  description: ReactNode;
 }
 
 export interface WritingMeta {
@@ -17,22 +23,34 @@ export interface WritingMeta {
   date?: string;
 }
 
-// ─── Work registry ───────────────────────────────────────────────────────────
 // Add an entry when you create a new file under src/content/work/.
 // slug must match the filename exactly (without .tsx).
 
-export const workItems: WorkMeta[] = [
+export const stuffItems: StuffMeta[] = [
   {
     slug: "makero",
     title: "Makero",
-    description: "Perpetual trading with prediction market based signals.",
+    description: "Perpetual trading with prediction market based signals",
     externalLink: "https://makero.xyz/",
   },
   {
     slug: "allo-exposure",
     title: "Allo Exposure",
     externalLink: "http://alloexposure.xyz/",
-    description: <>One shot into a basket of Kinetiq ecosystem tokens.</>,
+    description: <>One shot into a basket of Kinetiq ecosystem tokens</>,
+  },
+];
+
+export const workItems: WorkMeta[] = [
+  {
+    slug: "protocol-a",
+    title: "Protocol A",
+    description: "Oncahin intent based prime brokerage",
+  },
+  {
+    slug: "Name 2",
+    title: "Name 2",
+    description: "Perpetual trading with prediction market based signals",
   },
 ];
 
@@ -43,12 +61,12 @@ export const writingItems: WritingMeta[] = [
   {
     slug: "on-simplicity",
     title: "On the aesthetics of simplicity",
-    description: "Why removing things is often harder than adding them.",
+    description: "Why removing things is often harder than adding them",
   },
   {
     slug: "building-small-things",
     title: "What I've learned from building small things",
-    description: "Constraints as a creative force.",
+    description: "Constraints as a creative force",
   },
 ];
 
@@ -56,19 +74,30 @@ export const writingItems: WritingMeta[] = [
 // Eagerly bundled — all article components load with the app.
 // For a portfolio this is the right tradeoff: instant navigation, no flicker.
 
+const rawStuff = import.meta.glob<{ default: ComponentType }>(
+  "./stuff/**/*.tsx",
+  { eager: true },
+);
+
 const rawWork = import.meta.glob<{ default: ComponentType }>(
   "./work/**/*.tsx",
   { eager: true },
 );
+
 const rawWriting = import.meta.glob<{ default: ComponentType }>(
   "./writing/**/*.tsx",
   { eager: true },
 );
 
-// Works for both flat files (./work/project-two.tsx → 'project-two')
-// and subdirectory files (./work/makero/makero.tsx → 'makero').
+// Works for both flat files (./stuff/project-two.tsx → 'project-two')
+// and subdirectory files (./stuff/makero/makero.tsx → 'makero').
 const toSlug = (path: string): string =>
   path.split("/").pop()!.replace(".tsx", "");
+
+export const stuffComponents: Record<string, ComponentType> =
+  Object.fromEntries(
+    Object.entries(rawStuff).map(([path, mod]) => [toSlug(path), mod.default]),
+  );
 
 export const workComponents: Record<string, ComponentType> = Object.fromEntries(
   Object.entries(rawWork).map(([path, mod]) => [toSlug(path), mod.default]),

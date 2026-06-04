@@ -9,8 +9,8 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
+      { path: "stuff/:slug", element: <ArticlePage type="stuff" /> },
       { path: "work/:slug", element: <ArticlePage type="work" /> },
-      { path: "writing/:slug", element: <ArticlePage type="writing" /> },
     ],
   },
 ]);

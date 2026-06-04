@@ -1,15 +1,15 @@
 import { useMemo } from "react";
 import { useParams, Link, Navigate } from "react-router";
 import {
+  stuffItems,
   workItems,
-  writingItems,
+  stuffComponents,
   workComponents,
-  writingComponents,
 } from "../content/index";
-import type { WorkMeta } from "../content/index";
+import type { StuffMeta } from "../content/index";
 
 interface ArticlePageProps {
-  type: "work" | "writing";
+  type: "stuff" | "work";
 }
 
 export default function ArticlePage({ type }: ArticlePageProps) {
@@ -17,7 +17,7 @@ export default function ArticlePage({ type }: ArticlePageProps) {
 
   const meta = useMemo(() => {
     if (!slug) return null;
-    const items = type === "work" ? workItems : writingItems;
+    const items = type === "stuff" ? stuffItems : workItems;
     return items.find((item) => item.slug === slug) ?? null;
   }, [type, slug]);
 
@@ -26,14 +26,14 @@ export default function ArticlePage({ type }: ArticlePageProps) {
   }
 
   const Content =
-    type === "work" ? workComponents[slug] : writingComponents[slug];
+    type === "stuff" ? stuffComponents[slug] : workComponents[slug];
 
   if (!Content) {
     return <Navigate to="/" replace />;
   }
 
   const externalLink =
-    type === "work" ? (meta as WorkMeta).externalLink : undefined;
+    type === "stuff" ? (meta as StuffMeta).externalLink : undefined;
 
   return (
     <div>

@@ -5,10 +5,6 @@ export default function Makero() {
   return (
     <>
       <img src={makeroUi} alt="Makero trading interface" />
-      <small>
-        The Makero interface. Prediction market triggers on the left, perp
-        trading on the right.
-      </small>
 
       <p>
         While there are many ways to approach the market, narrative based

@@ -1,6 +1,6 @@
 import Section from "../components/Section";
 import PageLink from "../components/PageLink";
-import { workItems } from "../content/index";
+import { stuffItems, workItems } from "../content/index";
 
 export default function Home() {
   return (
@@ -30,6 +30,23 @@ export default function Home() {
       </Section>
 
       <Section heading="Stuff">
+        <ul className="link-list">
+          {stuffItems.map((item) => (
+            <li key={item.slug}>
+              <PageLink href={`/stuff/${item.slug}`}>{item.title}</PageLink>
+              <span className="item-meta">{item.description}</span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section heading="Work">
+        <p className="subtitle">
+          As this site is a reflection of my personal likes & interests, I am
+          excluding specifics about my professional experience. If you would
+          like to know more, please reach out and I am happy to provide more
+          information.
+        </p>
         <ul className="link-list">
           {workItems.map((item) => (
             <li key={item.slug}>

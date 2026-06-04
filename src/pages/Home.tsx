@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
       <div className="page-intro">
-        <h1>Cantaloupe Bob</h1>
+        <div className="intro-header">
+          <h1>Cantaloupe Bob</h1>
+        </div>
         <p className="subtitle">Rich or poor, it's nice to have money ...</p>
         <br></br>
         <p className="subtitle">
@@ -114,6 +116,14 @@ export default function Home() {
             </span>
           </li>
           <li>
+            <span className="item-title">Furiosa: A Mad Max Saga - 8.5/10</span>
+            <span className="item-meta">
+              This could be in my top 10 all time personal favorites. Too bad
+              we're gonna have to wait like another decade for a third
+              installment if we get one at all
+            </span>
+          </li>
+          <li>
             <span className="item-title">Bloodhounds - 8/10</span>
             <span className="item-meta">
               The long take fight scene choreography is sick. It's like John
@@ -121,11 +131,12 @@ export default function Home() {
             </span>
           </li>
           <li>
-            <span className="item-title">Furiosa: A Mad Max Saga - 8.5/10</span>
+            <span className="item-title">Tidal Wave (Haeundae) - 3.1/10</span>
             <span className="item-meta">
-              This could be in my top 10 all time personal favorites. Too bad
-              we're gonna have to wait like another decade for a thrid
-              installment if we get one at all
+              Overwhelmingly mid. It's a foreign film, which I'm generally more
+              charitable to, as I realize there's cultural nuance that doesn't
+              always translate well to English, but between the meh character
+              development and slapstick humour, I can't say I'd recommend it
             </span>
           </li>
         </ul>

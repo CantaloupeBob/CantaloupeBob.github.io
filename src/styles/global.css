@@ -52,7 +52,7 @@ html {
     background-color: var(--bg);
     color: var(--fg);
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.78;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

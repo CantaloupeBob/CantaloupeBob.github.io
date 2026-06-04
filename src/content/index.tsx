@@ -48,9 +48,9 @@ export const workItems: WorkMeta[] = [
     description: "Oncahin intent based prime brokerage",
   },
   {
-    slug: "Name 2",
-    title: "Name 2",
-    description: "Perpetual trading with prediction market based signals",
+    slug: "protocol-b",
+    title: "Protocol B",
+    description: "Fixed term non-liquidatable lending",
   },
 ];
 

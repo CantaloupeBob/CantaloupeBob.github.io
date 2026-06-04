@@ -208,6 +208,12 @@ p {
     font-style: italic;
 }
 
+.section-note {
+    color: var(--fg-muted);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
 /* ─── Links ─────────────────────────────────────────────────────────────────── */
 a {
     color: var(--fg);

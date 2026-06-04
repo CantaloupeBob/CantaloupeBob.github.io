@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <div className="page-intro">
         <h1>Cantaloupe Bob</h1>
-        <p className="subtitle">Rich or poor, it's nice to have money...</p>
+        <p className="subtitle">Rich or poor, it's nice to have money ...</p>
       </div>
 
       <Section>
@@ -41,11 +41,10 @@ export default function Home() {
       </Section>
 
       <Section heading="Work">
-        <p className="subtitle">
-          As this site is a reflection of my personal likes & interests, I am
-          excluding specifics about my professional experience. If you would
-          like to know more, please reach out and I am happy to provide more
-          information.
+        <p className="section-note">
+          As this site reflects personal likes & interests, I'm excluding
+          specifics about my professional experience. Reach out to me if you
+          want to know more.
         </p>
         <ul className="link-list">
           {workItems.map((item) => (

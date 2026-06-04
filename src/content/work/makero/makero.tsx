@@ -47,16 +47,10 @@ export default function Makero() {
         markets by using probability based triggers.
       </p>
 
-      {/*<img src={makeroUi} alt="Makero trading interface" />
-      <small>
-        The Makero interface. Prediction market triggers on the left, perp
-        trading on the right.
-      </small>*/}
-
       <p>Consider this hypothetical:</p>
 
       <p>
-        There exists a PM on whether the Strait of Hormuz will stabilize in 10
+        There exists a PM on whether the Strait of Hormuz will stabilize in ten
         days (the term "stabilize" is vague but sufficient for this example).
         The information coming from the White House as well as the IRGC is
         contradictory and convoluted, so the odds of stability according to the

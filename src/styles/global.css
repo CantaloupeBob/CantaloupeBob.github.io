@@ -80,7 +80,7 @@ body {
 /* ─── Header / Nav ──────────────────────────────────────────────────────────── */
 .header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     padding: var(--sp-12) 0 var(--sp-16);
 }
@@ -98,6 +98,32 @@ body {
 
 .site-name:hover {
     color: var(--fg);
+}
+
+/* ─── Nav actions ──────────────────────────────────────────────────────────── */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+}
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+}
+
+.nav-social-link {
+    display: flex;
+    align-items: center;
+    color: var(--fg-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.nav-social-link:hover {
+    color: var(--fg);
+    text-decoration: none;
 }
 
 /* ─── Theme toggle ──────────────────────────────────────────────────────────── */

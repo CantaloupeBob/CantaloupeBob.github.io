@@ -45,7 +45,7 @@ export const workItems: WorkMeta[] = [
   {
     slug: "protocol-a",
     title: "Protocol A",
-    description: "Oncahin intent based prime brokerage",
+    description: "Onchain intent based prime brokerage",
   },
   {
     slug: "protocol-b",

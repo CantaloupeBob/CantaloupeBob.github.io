@@ -271,6 +271,13 @@ a:hover {
     color: var(--fg-muted);
 }
 
+/* Plain (non-link) item title — same visual weight as a linked title */
+.item-title {
+    color: var(--fg);
+    font-size: inherit;
+    font-style: normal;
+}
+
 /* Inline links within descriptions — restore underline so they read as links */
 .link-list .item-meta a {
     text-decoration: underline;
@@ -289,6 +296,38 @@ a:hover {
     color: var(--fg-muted);
     margin-top: var(--sp-1);
     font-style: italic;
+}
+
+/* ─── Rapid list ─────────────────────────────────────────────────────────────── */
+/* Compact, dense list — titles match item-meta size, no underlines */
+.rapid-list {
+    list-style: none;
+    margin-top: var(--sp-4);
+}
+
+.rapid-list li {
+    padding: var(--sp-1) 0;
+}
+
+.rapid-list a,
+.rapid-list .item-title {
+    font-size: 0.875rem;
+    color: var(--fg);
+    text-decoration: none;
+    font-style: normal;
+    transition: color 0.15s ease;
+}
+
+.rapid-list a:hover {
+    color: var(--fg-muted);
+}
+
+.rapid-list .item-meta {
+    display: inline;
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    font-style: italic;
+    margin-left: var(--sp-2);
 }
 
 /* ─── Article prose ────────────────────────────────────────────────────────── */

@@ -1,8 +1,9 @@
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from "../store/themeStore";
+import "./ThemeToggle.css";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useThemeStore();
-  const next = theme === 'light' ? 'dark' : 'light';
+  const next = theme === "light" ? "dark" : "light";
 
   return (
     <button

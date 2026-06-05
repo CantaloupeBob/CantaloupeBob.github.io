@@ -1,0 +1,14 @@
+/* ─── Sections ──────────────────────────────────────────────────────────────── */
+.section {
+    padding: var(--sp-10) 0;
+    border-top: 1px solid var(--border);
+}
+
+.section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.section-body > * + * {
+    margin-top: var(--sp-4);
+}

@@ -7,6 +7,7 @@ import {
   workComponents,
 } from "../content/index";
 import type { StuffMeta } from "../content/index";
+import "./ArticlePage.css";
 
 interface ArticlePageProps {
   type: "stuff" | "work";

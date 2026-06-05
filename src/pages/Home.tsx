@@ -1,6 +1,7 @@
 import Section from "../components/Section";
 import PageLink from "../components/PageLink";
 import { stuffItems, workItems } from "../content/index";
+import "./Home.css";
 
 export default function Home() {
   return (
@@ -10,11 +11,6 @@ export default function Home() {
           <h1>Cantaloupe Bob</h1>
         </div>
         <p className="subtitle">Rich or poor, it's nice to have money ...</p>
-        <br></br>
-        <p className="subtitle">
-          If you need help building something sick, reach out! Also happy to
-          chat about tech/fi, food, movies or literally anything
-        </p>
       </div>
 
       <Section>
@@ -48,8 +44,8 @@ export default function Home() {
       <Section heading="Work">
         <p className="section-note">
           As this site reflects personal likes & interests, I'm excluding
-          specifics about my professional experience. Message me if you want to
-          know more
+          specifics about my professional experience. If you need help building
+          something sick, message me if you want to know more
         </p>
         <ul className="link-list">
           {workItems.map((item) => (
@@ -74,7 +70,7 @@ export default function Home() {
               </a>
             </span>
             <span className="item-meta">
-              Added the ability to run examples from ecrypted keystores. Needed
+              Added the ability to run examples from encrypted keystores. Needed
               this for my local workflow and thought it was worth pushing
             </span>
           </li>

@@ -1,0 +1,151 @@
+/* ─── Page navigation ───────────────────────────────────────────────────────── */
+.back-link {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--fg-muted);
+    text-decoration: none;
+    margin-bottom: var(--sp-10);
+    transition: color 0.15s ease;
+}
+
+.back-link:hover {
+    color: var(--fg);
+}
+
+/* ─── Article prose ────────────────────────────────────────────────────────── */
+/*
+  Scoped under .article so these rules never bleed into page UI.
+  h2/h3 inside articles override the global section-label styles.
+*/
+.article > * + * {
+    margin-top: var(--sp-6);
+}
+
+/* Sub-headings: proper italic serif, not the small-caps label style */
+.article h2 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--fg);
+    margin-top: var(--sp-12);
+    margin-bottom: 0;
+}
+
+.article h2 + * {
+    margin-top: var(--sp-4);
+}
+
+/* Section labels within articles: same small-caps pattern as global h2 */
+.article h3 {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--fg-muted);
+    margin-top: var(--sp-10);
+    margin-bottom: 0;
+}
+
+.article h3 + * {
+    margin-top: var(--sp-3);
+}
+
+.article blockquote {
+    border-left: 1px solid var(--border);
+    margin: 0;
+    padding-left: var(--sp-6);
+    color: var(--fg-muted);
+    font-style: italic;
+}
+
+.article blockquote > * + * {
+    margin-top: var(--sp-3);
+}
+
+.article ul,
+.article ol {
+    padding-left: var(--sp-6);
+}
+
+.article ul {
+    list-style: disc;
+}
+
+.article ol {
+    list-style: decimal;
+}
+
+.article li + li {
+    margin-top: var(--sp-2);
+}
+
+.article hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: var(--sp-12) 0;
+}
+
+.article strong {
+    font-weight: 600;
+    color: var(--fg);
+}
+
+/* Inline code */
+.article code {
+    font-family:
+        ui-monospace, "Cascadia Code", Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875em;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+}
+
+/* Code blocks */
+.article pre {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: var(--sp-4) var(--sp-6);
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.article pre code {
+    border: none;
+    padding: 0;
+    font-size: inherit;
+}
+
+.article img,
+.article video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: var(--sp-8) 0;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+}
+
+/* Full-bleed variant: add class="full" to an <img> or <video> */
+.article img.full,
+.article video.full {
+    width: 100%;
+}
+
+/* Caption: place a <small> immediately after an <img> or <video> */
+.article img + small,
+.article video + small {
+    display: block;
+    margin-top: calc(var(--sp-2) * -1);
+    margin-bottom: var(--sp-8);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+    letter-spacing: 0.02em;
+}

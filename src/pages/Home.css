@@ -1,0 +1,85 @@
+/* ─── Link list ─────────────────────────────────────────────────────────────── */
+.link-list {
+    list-style: none;
+    margin-top: var(--sp-4);
+}
+
+.link-list li {
+    padding: var(--sp-3) 0;
+    border-top: 1px solid var(--border);
+}
+
+.link-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Navigation links (item titles) — no underline, rely on color shift */
+.link-list a {
+    text-decoration: none;
+    color: var(--fg);
+    transition: color 0.15s ease;
+}
+
+.link-list a:hover {
+    color: var(--fg-muted);
+}
+
+/* Plain (non-link) item title — same visual weight as a linked title */
+.item-title {
+    color: var(--fg);
+    font-size: inherit;
+    font-style: normal;
+}
+
+/* Inline links within descriptions — restore underline so they read as links */
+.link-list .item-meta a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--border);
+}
+
+.link-list .item-meta a:hover {
+    color: var(--fg-muted);
+    text-decoration-color: var(--fg-muted);
+}
+
+.link-list .item-meta {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    margin-top: var(--sp-1);
+    font-style: italic;
+}
+
+/* ─── Rapid list ─────────────────────────────────────────────────────────────── */
+/* Compact, dense list — titles match item-meta size, no underlines */
+.rapid-list {
+    list-style: none;
+    margin-top: var(--sp-4);
+}
+
+.rapid-list li {
+    padding: var(--sp-1) 0;
+}
+
+.rapid-list a,
+.rapid-list .item-title {
+    font-size: 0.875rem;
+    color: var(--fg);
+    text-decoration: none;
+    font-style: normal;
+    transition: color 0.15s ease;
+}
+
+.rapid-list a:hover {
+    color: var(--fg-muted);
+}
+
+.rapid-list .item-meta {
+    display: inline;
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    font-style: italic;
+    margin-left: var(--sp-2);
+}

@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import ThemeToggle from "./ThemeToggle";
 import { email } from "../data/links";
+import "./Nav.css";
 
 function MailIcon() {
   return (

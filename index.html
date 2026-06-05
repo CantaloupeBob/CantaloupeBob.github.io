@@ -28,6 +28,21 @@
                 } catch (e) {}
             })();
         </script>
+        <script>
+            // Restore path after a GitHub Pages 404 redirect (see public/404.html).
+            (function () {
+                var r = sessionStorage.getItem("ghp-redirect");
+                if (r) {
+                    sessionStorage.removeItem("ghp-redirect");
+                    var url = new URL(r);
+                    history.replaceState(
+                        null,
+                        "",
+                        url.pathname + url.search + url.hash,
+                    );
+                }
+            })();
+        </script>
     </head>
     <body>
         <div id="root"></div>

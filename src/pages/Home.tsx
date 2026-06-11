@@ -15,30 +15,10 @@ export default function Home() {
 
       <Section>
         <p>
-          Software engineer focused on blockchain with a particular interest in
-          the{" "}
-          <a
-            href="https://hyperfoundation.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hyperliquid ecosystem
-          </a>
-          .
+          Software engineer focused on blockchain with a current interest in
+          perps trading.
         </p>
         <p>This is a space for things that I like, and whatever else.</p>
-      </Section>
-
-      <Section heading="Stuff">
-        <p className="section-note">Things I've made fueled by boredom</p>
-        <ul className="link-list">
-          {stuffItems.map((item) => (
-            <li key={item.slug}>
-              <PageLink href={`/stuff/${item.slug}`}>{item.title}</PageLink>
-              <span className="item-meta">{item.description}</span>
-            </li>
-          ))}
-        </ul>
       </Section>
 
       <Section heading="Work">
@@ -74,6 +54,18 @@ export default function Home() {
               this for my local workflow and thought it was worth pushing
             </span>
           </li>
+        </ul>
+      </Section>
+
+      <Section heading="Stuff">
+        <p className="section-note">Things I've made fueled by boredom</p>
+        <ul className="link-list">
+          {stuffItems.map((item) => (
+            <li key={item.slug}>
+              <PageLink href={`/stuff/${item.slug}`}>{item.title}</PageLink>
+              <span className="item-meta">{item.description}</span>
+            </li>
+          ))}
         </ul>
       </Section>
 

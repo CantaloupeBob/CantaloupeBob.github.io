@@ -21,6 +21,12 @@ export interface WorkMeta {
 
 export const stuffItems: StuffMeta[] = [
   {
+    slug: "pairs-bot",
+    title: "Pairs Trading Bot (am I rich yet?)",
+    description: "Algo bot to pair trade on perp dexs",
+    externalLink: "",
+  },
+  {
     slug: "makero",
     title: "Makero",
     description: "Perpetual trading with prediction market based signals",

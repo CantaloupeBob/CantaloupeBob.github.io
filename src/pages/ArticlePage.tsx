@@ -7,6 +7,7 @@ import {
   workComponents,
 } from "../content/index";
 import type { StuffMeta } from "../content/index";
+import { HomeIcon } from "../components/icons/HomeIcon";
 import "./ArticlePage.css";
 
 interface ArticlePageProps {
@@ -38,8 +39,8 @@ export default function ArticlePage({ type }: ArticlePageProps) {
 
   return (
     <div>
-      <Link to="/" className="back-link">
-        ← Home
+      <Link to="/" className="back-link" aria-label="Home">
+        <HomeIcon />
       </Link>
 
       <div className="page-intro">

@@ -6,6 +6,7 @@ export interface StuffMeta {
   slug: string;
   title: string;
   description: ReactNode;
+  date: string;
   year?: string;
   externalLink?: string;
 }
@@ -14,6 +15,7 @@ export interface WorkMeta {
   slug: string;
   title: string;
   description: ReactNode;
+  date?: string;
 }
 
 // Add an entry when you create a new file under src/content/work/.
@@ -24,12 +26,14 @@ export const stuffItems: StuffMeta[] = [
     slug: "pairs-bot",
     title: "Pairs Trading Bot (am I rich yet?)",
     description: "Algo bot to pair trade on perp dexs",
+    date: "June 16th, 2026",
     externalLink: "",
   },
   {
     slug: "makero",
     title: "Makero",
     description: "Perpetual trading with prediction market based signals",
+    date: "May 9th, 2026",
     externalLink: "https://makero.xyz/",
   },
   {
@@ -37,6 +41,7 @@ export const stuffItems: StuffMeta[] = [
     title: "Allo Exposure",
     externalLink: "http://alloexposure.xyz/",
     description: <>One shot into a basket of Kinetiq ecosystem tokens</>,
+    date: "May 31st, 2026",
   },
 ];
 

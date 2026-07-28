@@ -45,6 +45,7 @@ export default function ArticlePage({ type }: ArticlePageProps) {
 
       <div className="page-intro">
         <h1>{meta.title}</h1>
+        {meta.date && <p className="subtitle">{meta.date}</p>}
         {externalLink && (
           <p className="subtitle">
             <a href={externalLink} target="_blank" rel="noopener noreferrer">

@@ -37,6 +37,13 @@ export const stuffItems: StuffMeta[] = [
     externalLink: "https://makero.xyz/",
   },
   {
+    slug: "strUSD-leverage",
+    title: "Tori Finance strUSD Leverage",
+    externalLink: "https://strusd-leverage-ui.netlify.app/",
+    description: <>One-Click leverage on strUSD using flashloans</>,
+    date: "September 1st, 2026",
+  },
+  {
     slug: "allo-exposure",
     title: "Allo Exposure",
     externalLink: "http://alloexposure.xyz/",

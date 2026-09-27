@@ -15,10 +15,9 @@ export default function Home() {
 
       <Section>
         <p>
-          Software engineer focused on blockchain with a current interest in
-          perps.
+          Software engineer focused on blockchain. This is a space for things
+          that I like, and whatever else.
         </p>
-        <p>This is a space for things that I like, and whatever else.</p>
       </Section>
 
       <Section heading="Work">

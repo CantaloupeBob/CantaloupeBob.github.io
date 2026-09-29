@@ -7,14 +7,6 @@ export default function Makero() {
       <img src={makeroUi} alt="Makero trading interface" />
 
       <p>
-        While there are many ways to approach the market, narrative based
-        trading has been one of the most influential frameworks for
-        understanding and anticipating price movements, where the meme-ified
-        phrase, "monitoring the situation" is turned into a race to profit off
-        macro events.
-      </p>
-
-      <p>
         Traders who are first to position themselves correctly in an asset tied
         to a correlated event are likely to generate returns. This is nothing
         new, but it's a contributing factor to traders sitting in front of
